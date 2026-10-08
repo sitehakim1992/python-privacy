@@ -3,15 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Python 3 Learning App</title>
+    <title>Privacy Policy | 隐私政策 - Python 3 Learning App</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', sans-serif;
             line-height: 1.6;
             color: #333;
             max-width: 800px;
@@ -19,169 +15,254 @@
             padding: 20px;
             background: #f5f5f5;
         }
-        .container {
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        .container { background: white; padding: 40px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .lang-switch { display: flex; gap: 10px; justify-content: flex-end; margin-bottom: 20px; }
+        .lang-switch button {
+            border: 1px solid #4CAF50; background: #fff; color: #4CAF50;
+            padding: 8px 18px; border-radius: 20px; font-size: 15px; cursor: pointer;
         }
-        h1 {
-            color: #4CAF50;
-            margin-bottom: 10px;
-            font-size: 2em;
-        }
-        h2 {
-            color: #2196F3;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            font-size: 1.5em;
-        }
-        h3 {
-            color: #666;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-        }
-        ul {
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        .highlight {
-            background: #fff3cd;
-            padding: 15px;
-            border-left: 4px solid #FFC107;
-            margin: 20px 0;
-        }
-        .contact {
-            background: #e8f5e9;
-            padding: 20px;
-            border-radius: 5px;
-            margin-top: 30px;
-        }
-        .last-updated {
-            color: #666;
-            font-size: 0.9em;
-            margin-bottom: 20px;
-        }
-        a {
-            color: #2196F3;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
+        .lang-switch button.active { background: #4CAF50; color: #fff; }
+        h1 { color: #4CAF50; margin-bottom: 10px; font-size: 2em; }
+        h2 { color: #2196F3; margin-top: 30px; margin-bottom: 15px; font-size: 1.5em; }
+        h3 { color: #666; margin-top: 20px; margin-bottom: 10px; }
+        p { margin-bottom: 15px; }
+        ul { margin-left: 20px; margin-bottom: 15px; }
+        li { margin-bottom: 8px; }
+        .highlight { background: #fff3cd; padding: 15px; border-left: 4px solid #FFC107; margin: 20px 0; }
+        .contact { background: #e8f5e9; padding: 20px; border-radius: 5px; margin-top: 30px; }
+        .last-updated { color: #666; font-size: 0.9em; margin-bottom: 20px; }
+        a { color: #2196F3; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 15px; font-size: 0.92em; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; vertical-align: top; }
+        th { background: #f0f7ff; }
+        .table-wrap { overflow-x: auto; }
+        .lang-section { display: none; }
+        .lang-section.show { display: block; }
         @media (max-width: 600px) {
-            body {
-                padding: 10px;
-            }
-            .container {
-                padding: 20px;
-            }
-            h1 {
-                font-size: 1.5em;
-            }
-            h2 {
-                font-size: 1.2em;
-            }
+            body { padding: 10px; }
+            .container { padding: 20px; }
+            h1 { font-size: 1.5em; }
+            h2 { font-size: 1.2em; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+<div class="container">
+
+    <div class="lang-switch">
+        <button id="btn-en" type="button" onclick="setLang('en')">English</button>
+        <button id="btn-zh" type="button" onclick="setLang('zh')">中文</button>
+    </div>
+
+    <!-- ===================== ENGLISH ===================== -->
+    <div id="section-en" class="lang-section show">
         <h1>🔒 Privacy Policy</h1>
         <p class="last-updated"><strong>Last Updated:</strong> October 2026</p>
-        
+
         <div class="highlight">
-            <strong>🛡️️ Your Privacy Matters</strong><br>
-            Python 3 Learning App ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how information is collected, used, and shared when you use our mobile application.
+            <strong>🛡️ Your Privacy Matters</strong><br>
+            Python 3 Learning App ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how information is collected, used, and shared when you use our mobile application. When you first open the app, you will be asked to read and accept this policy. No advertising SDK is initialized and no advertising-related data is collected until you accept.
         </div>
 
         <h2>Information We Collect</h2>
         <p>
-            To provide a free educational experience supported by advertisements and to ensure app stability, we and our trusted third-party partners (such as advertising and analytics networks) may collect certain technical, device, and non-personal data.
+            To provide a free educational experience supported by advertisements and to ensure app stability, we and our third-party partners may collect certain technical, device, and non-personal data.
         </p>
 
-        <h3>1. Data Collected Automatically (via Third-Party SDKs like AdMob & Start.io):</h3>
+        <h3>1. Data collected automatically by third-party SDKs (only after you accept this policy):</h3>
         <ul>
-            <li><strong>Device & Advertising Identifiers:</strong> Advertising IDs (such as Google Advertising ID / AAID), IP addresses, and unique device identifiers used for ad personalization, frequency capping, attribution, and analytics.</li>
-            <li><strong>Location Data:</strong> Coarse or approximate location derived from your IP address or network data to serve relevant regional content and ads.</li>
-            <li><strong>App Activity & Interactions:</strong> Interactions with ads (clicks, impressions, views), app usage statistics, and navigation patterns to evaluate ad effectiveness and improve user experience.</li>
-            <li><strong>App Info & Performance Diagnostics:</strong> Crash logs, performance metrics, and network status data used to diagnose issues and optimize performance.</li>
+            <li><strong>Device &amp; Advertising Identifiers:</strong> Advertising IDs (such as Google Advertising ID), IP addresses, and device identifiers used for ad delivery, frequency capping, and analytics.</li>
+            <li><strong>Location Data:</strong> Approximate location derived from your IP address or network data to serve relevant regional ads.</li>
+            <li><strong>App Activity &amp; Interactions:</strong> Interactions with ads (clicks, impressions) and app usage statistics.</li>
+            <li><strong>App Info &amp; Performance Diagnostics:</strong> Crash logs, performance metrics, and network status data.</li>
         </ul>
 
         <h3>2. What We DO NOT Collect:</h3>
         <ul>
-            <li>❌ Personal identification information (such as your full name, physical address, direct email address, or phone number).</li>
+            <li>❌ Personal identification information (full name, address, email address, or phone number).</li>
             <li>❌ Financial or payment details.</li>
             <li>❌ Sensitive personal data or health information.</li>
+            <li>❌ We do not require registration or sign-in, and we do not access your contacts, photos, camera, or microphone.</li>
         </ul>
 
         <h2>Local Data Storage</h2>
         <p>
-            Your learning progress, quiz scores, achievements, daily streaks, and theme preferences are stored <strong>locally on your device only</strong>. This data remains on your device and is not transmitted to or stored on our external servers.
+            Your learning progress, quiz scores, achievements, daily streaks, and theme preferences are stored <strong>locally on your device only</strong>. This data is not transmitted to or stored on our servers.
         </p>
 
-        <h2>Third-Party Advertising & Analytics</h2>
+        <h2>Third-Party SDKs</h2>
+        <p>Our app integrates the following third-party SDKs. They collect data under their own privacy policies:</p>
+        <div class="table-wrap">
+        <table>
+            <tr><th>SDK</th><th>Provider</th><th>Purpose</th><th>Data involved</th><th>Privacy policy</th></tr>
+            <tr>
+                <td>Google Mobile Ads (AdMob)</td>
+                <td>Google LLC</td>
+                <td>Displaying advertisements</td>
+                <td>Advertising ID, IP address, device information, ad interaction data</td>
+                <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Link</a></td>
+            </tr>
+        </table>
+        </div>
         <p>
-            Our app integrates third-party SDKs to display advertisements and collect analytics. These partners may use cookies, device identifiers, and technical data in accordance with their respective privacy policies to serve tailored ads and measure performance.
+            You can manage Google ad settings at <a href="https://adssettings.google.com/" target="_blank" rel="noopener">Google Ads Settings</a>. Our app requests non-personalized ads only.
         </p>
-        <p>Our primary third-party advertising partners include:</p>
-        <ul>
-            <li>
-                <strong>Google AdMob:</strong> Provided by Google LLC. Google uses device identifiers and cookies to serve personalized or non-personalized ads. You can learn more about how Google handles user data by reading the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy & Terms</a> and manage your ad settings via <a href="https://adssettings.google.com/" target="_blank" rel="noopener">Google Ads Settings</a>.
-            </li>
-            <li>
-                <strong>Start.io:</strong> Provided by Start.io Inc. You can learn more about their data practices and opt-out options by visiting the <a href="https://www.start.io/policy/privacy-policy/" target="_blank" rel="noopener">Start.io Privacy Policy</a>.
-            </li>
-        </ul>
 
         <h2>Data Security</h2>
         <p>
-            We implement appropriate technical and organizational security measures to protect any data processed by the application. <strong>All data transferred between the app and third-party services is encrypted in transit</strong> using secure network protocols (HTTPS/SSL).
+            We implement appropriate technical and organizational measures to protect any data processed by the application. Data transferred between the app and third-party services is encrypted in transit using HTTPS/SSL.
         </p>
 
         <h2>Children's Privacy</h2>
         <p>
-            Our app does not knowingly collect personal information from children under the age of 13. We comply with applicable regulations including COPPA (Children's Online Privacy Protection Act) and GDPR. If you believe that a child has provided personal data improperly, please contact us immediately so we can take appropriate measures to delete it.
+            Our app does not knowingly collect personal information from children under the age of 13 (under 14 in mainland China). If you believe a child has provided personal data, please contact us and we will delete it promptly.
         </p>
 
-        <h2>Data Deletion & User Controls</h2>
-        <p>
-            You can clear your local progress data and reset advertising choices at any time by:
-        </p>
+        <h2>Your Rights &amp; Controls</h2>
         <ul>
-            <li>Using the reset progress options inside the app settings.</li>
-            <li>Resetting or limiting your Advertising ID in your device's Android/iOS system settings.</li>
-            <li>Clearing the application data through your device settings.</li>
-            <li>Uninstalling the application entirely from your device.</li>
+            <li>You may decline this policy; in that case the app will close and no data will be collected.</li>
+            <li>You may reset your progress from the app settings, or clear the app data in your device settings.</li>
+            <li>You may reset or limit your Advertising ID in your device system settings.</li>
+            <li>You may uninstall the app at any time.</li>
         </ul>
 
         <h2>Changes to This Privacy Policy</h2>
         <p>
-            We may update our Privacy Policy from time to time to reflect changes in our practices, services, or legal requirements. Any changes will be posted on this page with an updated revision date.
+            We may update this policy from time to time. Changes will be posted on this page with an updated revision date.
         </p>
 
         <div class="contact">
             <h2>📧 Contact Us</h2>
-            <p>
-                If you have any questions, suggestions, or concerns regarding this Privacy Policy, please feel free to reach out to us:
-            </p>
+            <p>If you have any questions or concerns regarding this Privacy Policy, please contact us:</p>
             <p>
                 <strong>Developer:</strong> newHMapps<br>
                 <strong>Email:</strong> <a href="mailto:newhmapps@gmail.com">newhmapps@gmail.com</a>
             </p>
         </div>
-
-        <p style="text-align: center; margin-top: 40px; color: #666;">
-            <strong>Python 3 Learning App</strong> by newHMapps<br>
-            © 2026 All Rights Reserved
-        </p>
     </div>
+
+    <!-- ===================== 中文 ===================== -->
+    <div id="section-zh" class="lang-section">
+        <h1>🔒 隐私政策</h1>
+        <p class="last-updated"><strong>最后更新：</strong>2026年10月</p>
+
+        <div class="highlight">
+            <strong>🛡️ 我们重视您的隐私</strong><br>
+            Python 3 学习应用（以下称“我们”）致力于保护您的隐私。本隐私政策说明您使用我们的移动应用时，信息如何被收集、使用和共享。首次打开应用时，我们会请您阅读并同意本政策。在您同意之前，应用不会初始化任何广告 SDK，也不会收集任何与广告相关的数据。
+        </div>
+
+        <h2>我们收集的信息</h2>
+        <p>
+            为了提供由广告支持的免费学习服务并保证应用稳定运行，我们及第三方合作伙伴可能会收集部分技术信息、设备信息和非个人信息。
+        </p>
+
+        <h3>1. 第三方 SDK 自动收集的数据（仅在您同意本政策后）：</h3>
+        <ul>
+            <li><strong>设备与广告标识符：</strong>广告标识符（如 Google 广告 ID）、IP 地址和设备标识符，用于广告投放、频次控制和统计分析。</li>
+            <li><strong>位置信息：</strong>根据 IP 地址或网络信息得出的大致位置，用于投放相关地区的广告。</li>
+            <li><strong>应用活动与交互：</strong>与广告的交互（点击、展示）以及应用使用统计。</li>
+            <li><strong>应用信息与性能诊断：</strong>崩溃日志、性能指标和网络状态数据。</li>
+        </ul>
+
+        <h3>2. 我们不收集的信息：</h3>
+        <ul>
+            <li>❌ 个人身份信息（姓名、住址、电子邮箱或手机号码）。</li>
+            <li>❌ 财务或支付信息。</li>
+            <li>❌ 敏感个人信息或健康信息。</li>
+            <li>❌ 本应用无需注册或登录，我们不会访问您的通讯录、相册、相机或麦克风。</li>
+        </ul>
+
+        <h2>本地数据存储</h2>
+        <p>
+            您的学习进度、测验成绩、成就、连续学习天数和主题偏好<strong>仅存储在您的设备本地</strong>，不会上传至我们的服务器。
+        </p>
+
+        <h2>第三方 SDK</h2>
+        <p>本应用集成了以下第三方 SDK，它们将根据各自的隐私政策收集数据：</p>
+        <div class="table-wrap">
+        <table>
+            <tr><th>SDK 名称</th><th>提供方</th><th>使用目的</th><th>涉及数据</th><th>隐私政策</th></tr>
+            <tr>
+                <td>Google Mobile Ads (AdMob)</td>
+                <td>Google LLC</td>
+                <td>展示广告</td>
+                <td>广告标识符、IP 地址、设备信息、广告交互数据</td>
+                <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">查看</a></td>
+            </tr>
+        </table>
+        </div>
+        <p>
+            您可以在 <a href="https://adssettings.google.com/" target="_blank" rel="noopener">Google 广告设置</a> 中管理广告偏好。本应用仅请求非个性化广告。
+        </p>
+
+        <h2>数据安全</h2>
+        <p>
+            我们采取合理的技术和管理措施保护应用处理的数据。应用与第三方服务之间传输的数据通过 HTTPS/SSL 加密。
+        </p>
+
+        <h2>儿童隐私</h2>
+        <p>
+            本应用不会故意收集 13 岁以下儿童（中国大陆地区为 14 岁以下）的个人信息。如果您认为儿童向我们提供了个人信息，请与我们联系，我们将及时删除。
+        </p>
+
+        <h2>您的权利与选择</h2>
+        <ul>
+            <li>您可以不同意本政策；此时应用将退出，且不会收集任何数据。</li>
+            <li>您可以在应用设置中重置学习进度，或在设备设置中清除应用数据。</li>
+            <li>您可以在设备系统设置中重置或限制广告标识符。</li>
+            <li>您可以随时卸载本应用。</li>
+        </ul>
+
+        <h2>本政策的变更</h2>
+        <p>
+            我们可能会不时更新本政策。变更将发布在本页面，并更新修订日期。
+        </p>
+
+        <div class="contact">
+            <h2>📧 联系我们</h2>
+            <p>如果您对本隐私政策有任何疑问或意见，请联系我们：</p>
+            <p>
+                <strong>开发者：</strong>newHMapps<br>
+                <strong>邮箱：</strong><a href="mailto:newhmapps@gmail.com">newhmapps@gmail.com</a>
+            </p>
+        </div>
+    </div>
+
+    <p style="text-align: center; margin-top: 40px; color: #666;">
+        <strong>Python 3 Learning App</strong> by newHMapps<br>
+        © 2026 All Rights Reserved
+    </p>
+</div>
+
+<noscript>
+    <style>.lang-section { display: block !important; }</style>
+</noscript>
+
+<script>
+    function setLang(lang) {
+        if (lang !== 'en' && lang !== 'zh') lang = 'en';
+        document.getElementById('section-en').classList.toggle('show', lang === 'en');
+        document.getElementById('section-zh').classList.toggle('show', lang === 'zh');
+        document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+        document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+        document.title = lang === 'zh'
+            ? '隐私政策 - Python 3 学习应用'
+            : 'Privacy Policy - Python 3 Learning App';
+        try { localStorage.setItem('policy_lang', lang); } catch (e) {}
+    }
+
+    (function init() {
+        var lang = null;
+        try { lang = new URLSearchParams(window.location.search).get('lang'); } catch (e) {}
+        if (!lang) { try { lang = localStorage.getItem('policy_lang'); } catch (e) {} }
+        if (!lang) {
+            var nav = (navigator.language || '').toLowerCase();
+            lang = nav.indexOf('zh') === 0 ? 'zh' : 'en';
+        }
+        setLang(lang);
+    })();
+</script>
 </body>
 </html>
